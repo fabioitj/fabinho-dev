@@ -1,0 +1,143 @@
+.habilidades {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    z-index: 4;
+
+
+    &__box {
+        display: none;
+    }
+
+    &__box-opened {
+        width: 100%;
+        height: 400px;
+        background-color: rgba(0,0,0,0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s all;
+        border-radius: 1rem;
+
+        &__left {
+            animation: showLeft 0.2s linear;
+        }
+
+        &__right {
+            animation: showRight 0.2s linear;
+        }
+
+        & i {
+            font-size: 16rem;
+        }
+    }
+
+    &__box-closed {
+        width: 100%;
+        height: 400px;
+        background-color: rgba(0,0,0,0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s all;
+        border-radius: 1rem;
+
+        &__left {
+            animation: hideLeft 0.2s linear;
+        }
+
+        &__right {
+            animation: hideRight 0.2s linear;
+        }
+
+        & i {
+            font-size: 16rem;
+        }
+    }
+
+    &__quantity {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+
+        & span {
+            transition: 0.2s all;
+            cursor: pointer;
+        }
+    }
+
+    &__buttons {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        left: 1rem;
+        right: 1rem;
+        bottom: 5rem;
+
+        & svg {
+            width: 24px;
+            height: 24px;
+            background-color: #555;
+            border-radius: 50%;
+            padding: 0.5rem;
+            transition: 0.2s all;
+
+            &:active {
+                background-color: #BBB;
+            }
+        }
+    }   
+}
+
+@keyframes showLeft {
+    from {
+        margin-right: 1000px;
+    }
+    to {
+        margin-right: 0;
+    }
+}
+
+@keyframes hideLeft {
+    from {
+        margin-right: 0;
+    }
+    to {
+        margin-right: 1000px;
+    }
+}
+
+@keyframes showRight {
+    from {
+        margin-left: 1000px;
+    }
+    to {
+        margin-left: 0px;
+    }
+}
+
+@keyframes hideRight {
+    from {
+        margin-left: 0px;
+    }
+    to {
+        margin-left: 1000px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .habilidades {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
