@@ -7,7 +7,7 @@ import ParticlesComp from './components/particles'
 import { useEffect, useState } from 'react'
 
 function App() {
-  const [offset, setOffset] = useState(0);
+  const [offset, setOffset] = useState(1);
   const height = 5000;
 
   useEffect(() => {
