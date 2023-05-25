@@ -139,5 +139,16 @@
     .habilidades {
         width: 50%;
         margin: 0 auto;
+
+        &__buttons {
+            bottom: 2rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .habilidades {
+        width: 50%;
+        margin: 0 auto;
     }
 }

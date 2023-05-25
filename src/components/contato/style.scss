@@ -21,12 +21,36 @@
 
         & input {
             padding: 0.5rem;
+
+            &::placeholder {
+                font-family: Arial, Helvetica, sans-serif;
+                color: white;
+            }
+
+            color: white;
+            border: 0;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid white;
         }
 
         & textarea {
             padding: 0.5rem;
             height: 75px;
             resize: vertical;
+
+            &::placeholder {
+                font-family: Arial, Helvetica, sans-serif;
+                color: white;
+            }
+
+            color: white;
+            border: 0;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid white;
+        }
+
+        & button {
+            color: white;
         }
     }
 
